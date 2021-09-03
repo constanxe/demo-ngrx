@@ -5,17 +5,23 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './modules/counter/store/counter.reducer';
-import { MyCounterComponent } from './modules/counter/components/my-counter/my-counter.component';
+import { simpleCounterReducer } from './modules/simple-counter/store/counter.reducer';
+import { SimpleCounterComponent } from './modules/simple-counter/component/counter.component';
+import { nextCounterReducer } from './modules/next-counter/store/counter.reducer';
+import { NextCounterComponent } from './modules/next-counter/component/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyCounterComponent
+    SimpleCounterComponent,
+    NextCounterComponent
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({ count: counterReducer }),
+    StoreModule.forRoot({
+      count: simpleCounterReducer,
+      counter: nextCounterReducer
+    }),
     StoreDevtoolsModule.instrument({maxAge: 25})
   ],
   providers: [],

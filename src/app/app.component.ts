@@ -3,7 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <app-my-counter></app-my-counter>  
+    <app-simple-counter></app-simple-counter>
+    <hr>
+    <app-next-counter></app-next-counter>
   `,
   styles: []
 })

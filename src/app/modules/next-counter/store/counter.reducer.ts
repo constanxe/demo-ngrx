@@ -7,9 +7,9 @@ export interface CounterState extends EntityState<Counter> {
   value: number;
 }
 
-export const adapter: EntityAdapter<Counter> = createEntityAdapter<Counter>();
+const adapter: EntityAdapter<Counter> = createEntityAdapter<Counter>();
 
-export const initialState = adapter.getInitialState({
+const initialState = adapter.getInitialState({
   value: 0
 });
 

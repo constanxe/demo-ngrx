@@ -7,14 +7,14 @@ import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
 import { basicCounterReducer } from './modules/basic-counter/store/basic-counter.reducer';
-import { counterWithSelectorReducer } from './modules/counter-with-selector/store/counter-with-selector.reducer';
+import { advancedCounterReducer } from './modules/advanced-counter/store/advanced-counter.reducer';
 import { BasicCounterComponent } from './modules/basic-counter/view/basic-counter.component';
-import { CounterWithSelectorComponent } from './modules/counter-with-selector/view/counter-with-selector.component';
+import { AdvancedCounterComponent } from './modules/advanced-counter/view/advanced-counter.component';
 import { CountComponent } from './components/count.component';
 
 const routes: Routes = [
   { path: 'basic-counter', component: BasicCounterComponent },
-  { path: 'counter-with-selector', component: CounterWithSelectorComponent},
+  { path: 'advanced-counter', component: AdvancedCounterComponent},
   { path: '**', redirectTo: 'basic-counter'}
 ];
 
@@ -23,14 +23,14 @@ const routes: Routes = [
     AppComponent,
     CountComponent,
     BasicCounterComponent,
-    CounterWithSelectorComponent
+    AdvancedCounterComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot({
       count: basicCounterReducer,
-      counter: counterWithSelectorReducer
+      counter: advancedCounterReducer
     }),
     StoreDevtoolsModule.instrument({maxAge: 25})
   ],

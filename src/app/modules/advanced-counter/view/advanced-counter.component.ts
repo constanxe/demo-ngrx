@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Counter } from '../model/counter-with-selector.model';
-import { clickIncrement, clickReset } from '../store/counter-with-selector.actions';
-import { getCounterValue } from '../store/counter-with-selector.selectors';
+import { Counter } from '../model/advanced-counter.model';
+import { clickIncrement, clickReset } from '../store/advanced-counter.actions';
+import { getCounterValue } from '../store/advanced-counter.selectors';
 
 @Component({
-  selector: 'app-counter-with-selector',
-  templateUrl: './counter-with-selector.component.html',
+  selector: 'app-advanced-counter',
+  templateUrl: './advanced-counter.component.html',
 })
-export class CounterWithSelectorComponent {
+export class AdvancedCounterComponent {
   count$: Observable<number>;
 
   constructor(private store: Store<{ counter: Counter }>) {

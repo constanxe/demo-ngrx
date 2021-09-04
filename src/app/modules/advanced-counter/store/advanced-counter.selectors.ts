@@ -1,4 +1,4 @@
-import { CounterState } from './counter-with-selector.reducer';
+import { CounterState } from './advanced-counter.reducer';
 import { createSelector, createFeatureSelector } from '@ngrx/store';
 
 export const courseFeatureSelector = createFeatureSelector<CounterState>('counter');

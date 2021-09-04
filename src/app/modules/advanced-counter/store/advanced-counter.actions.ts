@@ -1,7 +1,7 @@
 import { createAction, props } from '@ngrx/store';
 
-export const clickIncrement = createAction('[Counter with Selector] Increment', props<{ change: number }>());
-export const clickReset = createAction('[Counter with Selector] Reset');
+export const clickIncrement = createAction('[Advanced Counter] Increment', props<{ change: number }>());
+export const clickReset = createAction('[Advanced Counter] Reset');
 
 
 /*

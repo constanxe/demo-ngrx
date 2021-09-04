@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
           <a class="nav-link" routerLink="/basic-counter" routerLinkActive="active">Basic</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/counter-with-selector" routerLinkActive="active">With Selector</a>
+          <a class="nav-link" routerLink="/advanced-counter" routerLinkActive="active">Advanced</a>
         </li>
       </ul>
 

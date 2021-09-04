@@ -1,10 +1,10 @@
 <button id="increment" (click)="increment()">Increment</button>
 
-<div>Current Count: {{ count$ | async }}</div>
+<div class="py-2">Current Count: <span class="bg-dark text-white">{{ count$ | async }}</span></div>
 
 <button id="decrement" (click)="decrement()">Decrement</button>
 
-<button id="reset" (click)="reset()">Reset Counter</button>
+<button id="reset" (click)="reset()" class="ms-1">Reset</button>
 
 
 <!-- 

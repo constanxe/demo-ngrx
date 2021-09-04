@@ -4,11 +4,11 @@ import { Component, Input } from '@angular/core';
   selector: 'app-count',
   template: `
     <div class="py-2">
-      Current Count: <span class="{{ countClass }} text-white">{{ count }}</span>
+      Current Count: <span class="{{ highlight }} text-white">{{ count }}</span>
     </div>
   `,
 })
 export class CountComponent {
   @Input() count?: number | null;
-  @Input() countClass = 'bg-dark';
+  @Input() highlight = 'bg-dark';
 }

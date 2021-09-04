@@ -1,12 +1,13 @@
 import { createReducer, on } from '@ngrx/store';
+import { environment } from '../../../../environments/environment';
 import { clickIncrement, clickReset } from './basic-counter.actions';
 
-const initialState = 0;
+const initialState = environment.initialCount;
 
 export const basicCounterReducer = createReducer(
   initialState,
   on(clickIncrement, (state) => state + 1),
-  on(clickReset, (state) => 0)
+  on(clickReset, (state) => initialState)
 );
 
 

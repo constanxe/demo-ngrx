@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { environment } from '../../../../environments/environment';
 import { Counter } from '../model/advanced-counter.model';
 import { clickIncrement, clickReset } from '../store/advanced-counter.actions';
 import { getCounterValue } from '../store/advanced-counter.selectors';
@@ -11,7 +12,7 @@ import { getCounterValue } from '../store/advanced-counter.selectors';
 })
 export class AdvancedCounterComponent {
   count$: Observable<number>;
-  count: number = 0;
+  count: number = environment.initialCount;
 
   constructor(private store: Store<{ counter: Counter }>) {
     this.count$ = store.select(getCounterValue);

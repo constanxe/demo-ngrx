@@ -1,5 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
+import { environment } from '../../../../environments/environment';
 import { Counter } from '../model/advanced-counter.model';
 import { clickIncrement, clickReset } from './advanced-counter.actions';
 
@@ -10,13 +11,13 @@ export interface CounterState extends EntityState<Counter> {
 const adapter: EntityAdapter<Counter> = createEntityAdapter<Counter>();
 
 const initialState = adapter.getInitialState({
-  value: 0
+  value: environment.initialCount
 });
 
 export const advancedCounterReducer = createReducer(
   initialState,
   on(clickIncrement, (state, { change }) => ({ ...state, value: state.value + change })),
-  on(clickReset, (state) => ({ ...state, value: 0 }))
+  on(clickReset, (state) => ({ ...state, value: environment.initialCount }))
 );
 
 

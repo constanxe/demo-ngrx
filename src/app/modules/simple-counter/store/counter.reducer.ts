@@ -3,16 +3,12 @@ import { increment, decrement, reset } from './counter.actions';
 
 const initialState = 0;
 
-const _counterReducer = createReducer(
+export const simpleCounterReducer = createReducer(
   initialState,
   on(increment, (state) => state + 1),
   on(decrement, (state) => state - 1),
   on(reset, (state) => 0)
 );
-
-export function simpleCounterReducer(state = initialState, action: Action) {
-  return _counterReducer(state, action);
-}
 
 
 /*

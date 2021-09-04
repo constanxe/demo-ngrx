@@ -13,16 +13,12 @@ const initialState = adapter.getInitialState({
   value: 0
 });
 
-const _counterReducer = createReducer(
+export const nextCounterReducer = createReducer(
   initialState,
   on(increment, (state) => ({ ...state, value: state.value + 1 })),
   on(decrement, (state) => ({ ...state, value: state.value - 1 })),
   on(reset, (state) => ({ ...state, value: 0 }))
 );
-
-export function nextCounterReducer(state = initialState, action: Action) {
-  return _counterReducer(state, action);
-}
 
 
 /*

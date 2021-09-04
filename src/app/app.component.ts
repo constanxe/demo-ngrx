@@ -3,9 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <app-simple-counter></app-simple-counter>
-    <hr>
-    <app-next-counter></app-next-counter>
+    <h1>Counter</h1>
+    <nav>
+      <ul>
+        <li><a routerLink="/simple-counter" routerLinkActive="active">Simple</a></li>
+        <li><a routerLink="/next-counter" routerLinkActive="active">Next</a></li>
+      </ul>
+    </nav>
+    <!-- The routed views render in the <router-outlet>-->
+    <router-outlet></router-outlet>
   `,
   styles: []
 })

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Counter } from '../model/counter.model';
-import { increment, decrement, reset } from '../store/counter.actions';
+import { clickIncrement, clickDecrement, clickReset } from '../store/counter.actions';
 import { getCounterValue } from '../store/counter.selectors';
 
 @Component({
@@ -17,15 +17,15 @@ export class NextCounterComponent {
   }
 
   increment() {
-    this.store.dispatch(increment());
+    this.store.dispatch(clickIncrement());
   }
 
   decrement() {
-    this.store.dispatch(decrement());
+    this.store.dispatch(clickDecrement());
   }
 
   reset() {
-    this.store.dispatch(reset());
+    this.store.dispatch(clickReset());
   }
 }
 

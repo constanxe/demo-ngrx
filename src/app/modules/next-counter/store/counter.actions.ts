@@ -1,8 +1,8 @@
 import { createAction } from '@ngrx/store';
 
-export const increment = createAction('[Next Counter] Increment');
-export const decrement = createAction('[Next Counter] Decrement');
-export const reset = createAction('[Next Counter] Reset');
+export const clickIncrement = createAction('[Next Counter] Increment');
+export const clickDecrement = createAction('[Next Counter] Decrement');
+export const clickReset = createAction('[Next Counter] Reset');
 
 
 /*

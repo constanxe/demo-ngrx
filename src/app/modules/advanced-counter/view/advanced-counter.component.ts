@@ -11,9 +11,11 @@ import { getCounterValue } from '../store/advanced-counter.selectors';
 })
 export class AdvancedCounterComponent {
   count$: Observable<number>;
+  count: number = 0;
 
   constructor(private store: Store<{ counter: Counter }>) {
     this.count$ = store.select(getCounterValue);
+    this.count$.subscribe(count => this.count = count);
   }
 
   increment() {
@@ -21,6 +23,7 @@ export class AdvancedCounterComponent {
   }
 
   reset() {
+    console.log(this.count);
     this.store.dispatch(clickReset());
   }
 }

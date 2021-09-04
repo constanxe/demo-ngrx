@@ -1,6 +1,6 @@
-import { createAction } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 
-export const clickIncrement = createAction('[Counter with Selector] Increment');
+export const clickIncrement = createAction('[Counter with Selector] Increment', props<{ change: number }>());
 export const clickReset = createAction('[Counter with Selector] Reset');
 
 

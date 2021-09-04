@@ -17,7 +17,7 @@ export class CounterWithSelectorComponent {
   }
 
   increment() {
-    this.store.dispatch(clickIncrement());
+    this.store.dispatch(clickIncrement({ change: 1 }));
   }
 
   reset() {

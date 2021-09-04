@@ -15,7 +15,7 @@ const initialState = adapter.getInitialState({
 
 export const counterWithSelectorReducer = createReducer(
   initialState,
-  on(clickIncrement, (state) => ({ ...state, value: state.value + 1 })),
+  on(clickIncrement, (state, { change }) => ({ ...state, value: state.value + change })),
   on(clickReset, (state) => ({ ...state, value: 0 }))
 );
 

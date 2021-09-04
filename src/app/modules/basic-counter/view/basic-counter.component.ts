@@ -10,8 +10,8 @@ import { clickIncrement, clickReset } from '../store/basic-counter.actions';
 export class BasicCounterComponent {
   count$: Observable<number>;
 
-  constructor(private store: Store<{ count: number }>) {
-    this.count$ = store.select('count');
+  constructor(private store: Store<{ basicCount: number }>) {
+    this.count$ = store.select('basicCount');
   }
 
   increment() {

@@ -29,10 +29,10 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot({
-      count: basicCounterReducer,
-      counter: advancedCounterReducer
+      basicCount: basicCounterReducer,
+      advancedCounter: advancedCounterReducer
     }),
-    StoreDevtoolsModule.instrument({maxAge: 25})
+    StoreDevtoolsModule.instrument({ maxAge: 25 })
   ],
   providers: [],
   bootstrap: [AppComponent]

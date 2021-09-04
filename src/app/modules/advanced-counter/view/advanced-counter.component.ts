@@ -14,7 +14,7 @@ export class AdvancedCounterComponent {
   count$: Observable<number>;
   count: number = environment.initialCount;
 
-  constructor(private store: Store<{ counter: Counter }>) {
+  constructor(private store: Store<{ advancedCounter: Counter }>) {
     this.count$ = store.select(getCounterValue);
     this.count$.subscribe(count => this.count = count);
   }

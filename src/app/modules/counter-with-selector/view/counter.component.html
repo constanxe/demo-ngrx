@@ -1,6 +1,6 @@
 <button id="increment" (click)="increment()">Increment</button>
 
-<div class="py-2">Current Count: <span class="bg-primary text-white">{{ count$ | async }}</span></div>
+<app-count [count]="count$ | async" class="bg-secondary"></app-count>
 
 <button id="decrement" (click)="decrement()">Decrement</button>
 

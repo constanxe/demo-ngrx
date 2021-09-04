@@ -10,6 +10,7 @@ import { basicCounterReducer } from './modules/basic-counter/store/counter.reduc
 import { counterWithSelectorReducer } from './modules/counter-with-selector/store/counter.reducer';
 import { BasicCounterComponent } from './modules/basic-counter/view/counter.component';
 import { CounterWithSelectorComponent } from './modules/counter-with-selector/view/counter.component';
+import { CountComponent } from './components/count.component';
 
 const routes: Routes = [
   { path: 'basic-counter', component: BasicCounterComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    CountComponent,
     BasicCounterComponent,
     CounterWithSelectorComponent
   ],

@@ -1,9 +1,9 @@
-<button id="increment" (click)="increment()">Increment</button>
+<button (click)="increment()">Increment</button>
 <i class="px-2">{{ '{ type: "[Basic Counter] Increment" }' }}</i>
 
 <app-count [count]="count$ | async"></app-count>
 
-<button id="reset" (click)="reset()">Reset</button>
+<button (click)="reset()">Reset</button>
 <i class="px-2">{{ '{ type: "[Basic Counter] Reset" }' }}</i>
 
 

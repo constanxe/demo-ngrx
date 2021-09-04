@@ -1,9 +1,9 @@
-<button id="increment" (click)="increment()">Increment</button> 
+<button (click)="increment()">Increment</button> 
 <i class="px-2">{{ '{ type: "[Advanced Counter] Increment", change: 1 }' }}</i>
 
 <app-count [count]="count$ | async" [highlight]="'bg-primary'"></app-count>
 
-<button id="reset" (click)="reset()">Reset</button>
+<button (click)="reset()">Reset</button>
 <i class="px-2">{{ '{ type: "[Advanced Counter] Reset" }' }}</i>
 
 

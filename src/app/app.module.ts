@@ -8,9 +8,9 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { basicCounterReducer } from './modules/basic-counter/store/basic-counter.reducer';
 import { advancedCounterReducer } from './modules/advanced-counter/store/advanced-counter.reducer';
+import { CountComponent } from './components/count.component';
 import { BasicCounterComponent } from './modules/basic-counter/view/basic-counter.component';
 import { AdvancedCounterComponent } from './modules/advanced-counter/view/advanced-counter.component';
-import { CountComponent } from './components/count.component';
 
 const routes: Routes = [
   { path: 'basic-counter', component: BasicCounterComponent },

@@ -13,7 +13,7 @@ const initialState = adapter.getInitialState({
   value: 0
 });
 
-export const nextCounterReducer = createReducer(
+export const counterWithSelectorReducer = createReducer(
   initialState,
   on(clickIncrement, (state) => ({ ...state, value: state.value + 1 })),
   on(clickDecrement, (state) => ({ ...state, value: state.value - 1 })),

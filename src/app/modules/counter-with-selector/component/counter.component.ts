@@ -6,10 +6,10 @@ import { clickIncrement, clickDecrement, clickReset } from '../store/counter.act
 import { getCounterValue } from '../store/counter.selectors';
 
 @Component({
-  selector: 'app-next-counter',
+  selector: 'app-counter-with-selector',
   templateUrl: './counter.component.html',
 })
-export class NextCounterComponent {
+export class CounterWithSelectorComponent {
   count$: Observable<number>;
 
   constructor(private store: Store<{ counter: Counter }>) {

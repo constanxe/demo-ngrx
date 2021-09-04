@@ -20,7 +20,7 @@ const _counterReducer = createReducer(
   on(reset, (state) => ({ ...state, value: 0 }))
 );
 
-export function nextCounterReducer(state: CounterState | undefined, action: Action) {
+export function nextCounterReducer(state = initialState, action: Action) {
   return _counterReducer(state, action);
 }
 

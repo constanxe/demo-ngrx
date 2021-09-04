@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Counter } from '../model/counter.model';
-import { clickIncrement, clickDecrement, clickReset } from '../store/counter.actions';
-import { getCounterValue } from '../store/counter.selectors';
+import { Counter } from '../model/counter-with-selector.model';
+import { clickIncrement, clickDecrement, clickReset } from '../store/counter-with-selector.actions';
+import { getCounterValue } from '../store/counter-with-selector.selectors';
 
 @Component({
   selector: 'app-counter-with-selector',
-  templateUrl: './counter.component.html',
+  templateUrl: './counter-with-selector.component.html',
 })
 export class CounterWithSelectorComponent {
   count$: Observable<number>;

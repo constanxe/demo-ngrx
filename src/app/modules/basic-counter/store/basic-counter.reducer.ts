@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { clickIncrement, clickDecrement, clickReset } from './counter.actions';
+import { clickIncrement, clickDecrement, clickReset } from './basic-counter.actions';
 
 const initialState = 0;
 

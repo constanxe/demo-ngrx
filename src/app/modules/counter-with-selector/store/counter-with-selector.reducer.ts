@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
-import { Counter } from '../model/counter.model';
-import { clickIncrement, clickDecrement, clickReset } from './counter.actions';
+import { Counter } from '../model/counter-with-selector.model';
+import { clickIncrement, clickDecrement, clickReset } from './counter-with-selector.actions';
 
 export interface CounterState extends EntityState<Counter> {
   value: number;

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { clickIncrement, clickDecrement, clickReset } from '../store/counter.actions';
+import { clickIncrement, clickDecrement, clickReset } from '../store/basic-counter.actions';
 
 @Component({
   selector: 'app-basic-counter',
-  templateUrl: './counter.component.html',
+  templateUrl: './basic-counter.component.html',
 })
 export class BasicCounterComponent {
   count$: Observable<number>;

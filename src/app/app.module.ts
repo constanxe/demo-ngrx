@@ -6,10 +6,10 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
-import { basicCounterReducer } from './modules/basic-counter/store/counter.reducer';
-import { counterWithSelectorReducer } from './modules/counter-with-selector/store/counter.reducer';
-import { BasicCounterComponent } from './modules/basic-counter/view/counter.component';
-import { CounterWithSelectorComponent } from './modules/counter-with-selector/view/counter.component';
+import { basicCounterReducer } from './modules/basic-counter/store/basic-counter.reducer';
+import { counterWithSelectorReducer } from './modules/counter-with-selector/store/counter-with-selector.reducer';
+import { BasicCounterComponent } from './modules/basic-counter/view/basic-counter.component';
+import { CounterWithSelectorComponent } from './modules/counter-with-selector/view/counter-with-selector.component';
 import { CountComponent } from './components/count.component';
 
 const routes: Routes = [

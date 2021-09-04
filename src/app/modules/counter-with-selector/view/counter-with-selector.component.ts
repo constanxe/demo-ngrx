@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Counter } from '../model/counter-with-selector.model';
-import { clickIncrement, clickDecrement, clickReset } from '../store/counter-with-selector.actions';
+import { clickIncrement, clickReset } from '../store/counter-with-selector.actions';
 import { getCounterValue } from '../store/counter-with-selector.selectors';
 
 @Component({
@@ -18,10 +18,6 @@ export class CounterWithSelectorComponent {
 
   increment() {
     this.store.dispatch(clickIncrement());
-  }
-
-  decrement() {
-    this.store.dispatch(clickDecrement());
   }
 
   reset() {

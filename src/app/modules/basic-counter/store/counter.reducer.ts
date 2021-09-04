@@ -3,7 +3,7 @@ import { clickIncrement, clickDecrement, clickReset } from './counter.actions';
 
 const initialState = 0;
 
-export const simpleCounterReducer = createReducer(
+export const basicCounterReducer = createReducer(
   initialState,
   on(clickIncrement, (state) => state + 1),
   on(clickDecrement, (state) => state - 1),

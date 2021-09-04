@@ -4,10 +4,10 @@ import { Observable } from 'rxjs';
 import { clickIncrement, clickDecrement, clickReset } from '../store/counter.actions';
 
 @Component({
-  selector: 'app-simple-counter',
+  selector: 'app-basic-counter',
   templateUrl: './counter.component.html',
 })
-export class SimpleCounterComponent {
+export class BasicCounterComponent {
   count$: Observable<number>;
 
   constructor(private store: Store<{ count: number }>) {

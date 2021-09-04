@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
     <ul class="nav nav-tabs my-3">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/simple-counter" routerLinkActive="active">Simple</a>
+        <a class="nav-link" routerLink="/basic-counter" routerLinkActive="active">Basic</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/counter-with-selector" routerLinkActive="active">With Selector</a>

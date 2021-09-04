@@ -1,4 +1,4 @@
-import { Action, createReducer, on } from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import { Counter } from '../model/counter.model';
 import { clickIncrement, clickDecrement, clickReset } from './counter.actions';

@@ -1,7 +1,7 @@
 import { createAction } from '@ngrx/store';
 
-export const clickIncrement = createAction('[Basic Counter] Increment');
-export const clickReset = createAction('[Basic Counter] Reset');
+export const increment = createAction('[Basic Counter] Increment');
+export const reset = createAction('[Basic Counter] Reset');
 
 
 /*

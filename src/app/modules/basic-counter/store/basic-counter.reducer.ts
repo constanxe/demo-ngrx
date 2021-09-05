@@ -1,12 +1,12 @@
 import { createReducer, on } from '@ngrx/store';
-import { clickIncrement, clickReset } from './basic-counter.actions';
+import { increment, reset } from './basic-counter.actions';
 
 const initialState = 0;
 
 export const basicCounterReducer = createReducer(
   initialState,
-  on(clickIncrement, (state) => state + 1),
-  on(clickReset, (state) => initialState)
+  on(increment, (state) => state + 1),
+  on(reset, (state) => initialState)
 );
 
 

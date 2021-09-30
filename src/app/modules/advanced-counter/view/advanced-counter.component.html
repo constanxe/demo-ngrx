@@ -1,10 +1,17 @@
-<button (click)="clickIncrement()">Increment</button> 
-<i class="px-2">{{ '{ type: "[Advanced Counter] Increment", change: 1 }' }}</i>
-
 <app-count [count]="count$ | async" [highlight]="'bg-primary'"></app-count>
 
-<button (click)="clickReset()">Reset</button>
-<i class="px-2">{{ '{ type: "[Advanced Counter] Reset" }' }}</i>
+<button (click)="clickIncrement()">
+  Increment
+</button> 
+
+<div class="m-1">
+  <pre>
+  {{ '{' }}
+    type: "[Advanced Counter] Increment",
+    <b>change: 1</b>
+  {{ '}' }}
+  </pre>
+</div>
 
 
 <!-- 

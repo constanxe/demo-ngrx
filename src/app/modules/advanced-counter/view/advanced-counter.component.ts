@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { environment } from '../../../../environments/environment';
 import { Counter } from '../model/advanced-counter.model';
-import { increment, reset } from '../store/advanced-counter.actions';
+import { increment } from '../store/advanced-counter.actions';
 import { getCounterValue } from '../store/advanced-counter.selectors';
 
 @Component({
@@ -20,12 +20,7 @@ export class AdvancedCounterComponent {
   }
 
   clickIncrement() {
-    this.store.dispatch( increment({ change: 1 }));
-  }
-
-  clickReset() {
-    console.log(this.count);
-    this.store.dispatch( reset());
+    this.store.dispatch(increment({ change: 1 }));
   }
 }
 
